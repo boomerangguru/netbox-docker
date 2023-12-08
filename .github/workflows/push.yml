@@ -21,7 +21,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
+          python-version: '3.10'
       - name: Lint Code Base
         uses: github/super-linter@v5
         env:
@@ -56,7 +56,7 @@ jobs:
     env:
       GH_ACTION: enable
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      IMAGE_NAMES: docker.io/netboxcommunity/netbox
+      IMAGE_NAMES: docker.io/boomerang11/netbox
     runs-on: ubuntu-latest
     name: Builds new NetBox Docker Images
     steps:
